@@ -7,16 +7,16 @@ package com.enigma.circle;
 
 import java.util.Scanner;
 
-public class App extends Circle
+public class App
 {
     public static void main( String[] args )
     {
-        App circle = new App();
+        double pi = 3.14;
         Scanner input = new Scanner(System.in);
         System.out.print("Input the radius: ");
         int radius = input.nextInt();
-        circle.circle(radius);
-        System.out.println("Area: " + circle.getArea());
-        System.out.println("Round: " + circle.getRound());
+        Circle c = new Circle(pi, radius);
+        System.out.println("Area: " + c.getArea());
+        System.out.println("Round: " + c.getRound());
     }
 }

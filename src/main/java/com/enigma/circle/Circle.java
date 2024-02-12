@@ -1,18 +1,30 @@
 package com.enigma.circle;
 
-public class Circle {
+public class Circle extends piValue{
     private int radius;
-    private double pi = 3.14;
 
-    public void circle(int radius){
+    Circle(double pi, int radius){
+        super(pi);
         this.radius = radius;
     }
 
     public double getArea(){
-        return pi * (radius * radius);
+        return super.getPI() * (radius*radius);
     }
 
     public double getRound(){
-        return 2 * pi * radius;
+        return 2 * super.getPI() * radius;
+    }
+}
+
+class piValue {
+    private double pi;
+
+    piValue(double pi){
+        this.pi = pi;
+    }
+
+    public double getPI(){
+        return pi;
     }
 }
