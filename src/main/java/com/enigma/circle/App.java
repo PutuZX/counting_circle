@@ -4,10 +4,19 @@ package com.enigma.circle;
  * Hello world!
  *
  */
-public class App 
+
+import java.util.Scanner;
+
+public class App extends Circle
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        App circle = new App();
+        Scanner input = new Scanner(System.in);
+        System.out.print("Input the radius: ");
+        int radius = input.nextInt();
+        circle.circle(radius);
+        System.out.println("Area: " + circle.getArea());
+        System.out.println("Round: " + circle.getRound());
     }
 }
